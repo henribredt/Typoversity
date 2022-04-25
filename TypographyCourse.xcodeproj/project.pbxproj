@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BB2EC3B72816DE8600806EBD /* TypographyCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */; };
-		BB2EC3B92816DE8600806EBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3B82816DE8600806EBD /* ContentView.swift */; };
 		BB2EC3BB2816DE8800806EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2EC3BA2816DE8800806EBD /* Assets.xcassets */; };
 		BB2EC3BE2816DE8800806EBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2EC3BD2816DE8800806EBD /* Preview Assets.xcassets */; };
 		BB2EC3C82816DE8800806EBD /* TypographyCourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3C72816DE8800806EBD /* TypographyCourseTests.swift */; };
 		BB2EC3D22816DE8800806EBD /* TypographyCourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3D12816DE8800806EBD /* TypographyCourseUITests.swift */; };
 		BB2EC3D42816DE8800806EBD /* TypographyCourseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3D32816DE8800806EBD /* TypographyCourseUITestsLaunchTests.swift */; };
+		BB2EC3E52816DF8000806EBD /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3E42816DF8000806EBD /* Content.swift */; };
+		BB2EC3E72816DF9D00806EBD /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3E62816DF9D00806EBD /* Page.swift */; };
+		BB2EC3E92816DFD100806EBD /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3E82816DFD100806EBD /* AboutView.swift */; };
+		BB2EC3EB2816DFE300806EBD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3EA2816DFE300806EBD /* BaseView.swift */; };
+		BB2EC3ED2816DFFB00806EBD /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3EC2816DFFB00806EBD /* PageContentView.swift */; };
+		BB2EC3EF2816E00E00806EBD /* PageNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3EE2816E00E00806EBD /* PageNavigationView.swift */; };
+		BB2EC3F12816E01D00806EBD /* PagePlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3F02816E01D00806EBD /* PagePlaygroundView.swift */; };
+		BB2EC3F42816E03B00806EBD /* FontsContentCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3F32816E03B00806EBD /* FontsContentCustomView.swift */; };
+		BB2EC3F72816E06800806EBD /* WelcomePlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3F62816E06800806EBD /* WelcomePlaygroundView.swift */; };
+		BB2EC3F92816E07E00806EBD /* QuizPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3F82816E07E00806EBD /* QuizPlaygroundView.swift */; };
+		BB2EC3FB2816E09000806EBD /* KerningPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3FA2816E09000806EBD /* KerningPlaygroundView.swift */; };
+		BB2EC3FD2816E0A200806EBD /* HierarchyPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3FC2816E0A200806EBD /* HierarchyPlaygroundView.swift */; };
+		BB2EC3FF2816E0B300806EBD /* FontsPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3FE2816E0B300806EBD /* FontsPlaygroundView.swift */; };
+		BB2EC4012816E0C100806EBD /* AppPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC4002816E0C100806EBD /* AppPlaygroundView.swift */; };
+		BB2EC4032816E0D900806EBD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC4022816E0D900806EBD /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +50,6 @@
 /* Begin PBXFileReference section */
 		BB2EC3B32816DE8600806EBD /* TypographyCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypographyCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyCourseApp.swift; sourceTree = "<group>"; };
-		BB2EC3B82816DE8600806EBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB2EC3BA2816DE8800806EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB2EC3BD2816DE8800806EBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB2EC3C32816DE8800806EBD /* TypographyCourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypographyCourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,22 @@
 		BB2EC3CD2816DE8800806EBD /* TypographyCourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypographyCourseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2EC3D12816DE8800806EBD /* TypographyCourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyCourseUITests.swift; sourceTree = "<group>"; };
 		BB2EC3D32816DE8800806EBD /* TypographyCourseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyCourseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB2EC3E02816DEC100806EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB2EC3E42816DF8000806EBD /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		BB2EC3E62816DF9D00806EBD /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		BB2EC3E82816DFD100806EBD /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BB2EC3EA2816DFE300806EBD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BB2EC3EC2816DFFB00806EBD /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		BB2EC3EE2816E00E00806EBD /* PageNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageNavigationView.swift; sourceTree = "<group>"; };
+		BB2EC3F02816E01D00806EBD /* PagePlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC3F32816E03B00806EBD /* FontsContentCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsContentCustomView.swift; sourceTree = "<group>"; };
+		BB2EC3F62816E06800806EBD /* WelcomePlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC3F82816E07E00806EBD /* QuizPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC3FA2816E09000806EBD /* KerningPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerningPlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC3FC2816E0A200806EBD /* HierarchyPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyPlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC3FE2816E0B300806EBD /* FontsPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsPlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC4002816E0C100806EBD /* AppPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPlaygroundView.swift; sourceTree = "<group>"; };
+		BB2EC4022816E0D900806EBD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +123,11 @@
 		BB2EC3B52816DE8600806EBD /* TypographyCourse */ = {
 			isa = PBXGroup;
 			children = (
+				BB2EC3E12816DF3F00806EBD /* Model */,
+				BB2EC3E22816DF4D00806EBD /* View */,
+				BB2EC3E32816DF5500806EBD /* ViewModel */,
+				BB2EC3E02816DEC100806EBD /* Info.plist */,
 				BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */,
-				BB2EC3B82816DE8600806EBD /* ContentView.swift */,
 				BB2EC3BA2816DE8800806EBD /* Assets.xcassets */,
 				BB2EC3BC2816DE8800806EBD /* Preview Content */,
 			);
@@ -125,6 +157,58 @@
 				BB2EC3D32816DE8800806EBD /* TypographyCourseUITestsLaunchTests.swift */,
 			);
 			path = TypographyCourseUITests;
+			sourceTree = "<group>";
+		};
+		BB2EC3E12816DF3F00806EBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC3E42816DF8000806EBD /* Content.swift */,
+				BB2EC3E62816DF9D00806EBD /* Page.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB2EC3E22816DF4D00806EBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC3F22816E02C00806EBD /* ContentCustomViews */,
+				BB2EC3F52816E04E00806EBD /* PlaygroundViews */,
+				BB2EC3E82816DFD100806EBD /* AboutView.swift */,
+				BB2EC3EA2816DFE300806EBD /* BaseView.swift */,
+				BB2EC3EC2816DFFB00806EBD /* PageContentView.swift */,
+				BB2EC3EE2816E00E00806EBD /* PageNavigationView.swift */,
+				BB2EC3F02816E01D00806EBD /* PagePlaygroundView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB2EC3E32816DF5500806EBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC4022816E0D900806EBD /* AppState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BB2EC3F22816E02C00806EBD /* ContentCustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC3F32816E03B00806EBD /* FontsContentCustomView.swift */,
+			);
+			path = ContentCustomViews;
+			sourceTree = "<group>";
+		};
+		BB2EC3F52816E04E00806EBD /* PlaygroundViews */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC3F62816E06800806EBD /* WelcomePlaygroundView.swift */,
+				BB2EC3F82816E07E00806EBD /* QuizPlaygroundView.swift */,
+				BB2EC3FA2816E09000806EBD /* KerningPlaygroundView.swift */,
+				BB2EC3FC2816E0A200806EBD /* HierarchyPlaygroundView.swift */,
+				BB2EC3FE2816E0B300806EBD /* FontsPlaygroundView.swift */,
+				BB2EC4002816E0C100806EBD /* AppPlaygroundView.swift */,
+			);
+			path = PlaygroundViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +341,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB2EC3B92816DE8600806EBD /* ContentView.swift in Sources */,
+				BB2EC3FF2816E0B300806EBD /* FontsPlaygroundView.swift in Sources */,
+				BB2EC3FB2816E09000806EBD /* KerningPlaygroundView.swift in Sources */,
+				BB2EC3F42816E03B00806EBD /* FontsContentCustomView.swift in Sources */,
+				BB2EC3FD2816E0A200806EBD /* HierarchyPlaygroundView.swift in Sources */,
+				BB2EC3F12816E01D00806EBD /* PagePlaygroundView.swift in Sources */,
+				BB2EC3F72816E06800806EBD /* WelcomePlaygroundView.swift in Sources */,
+				BB2EC3E92816DFD100806EBD /* AboutView.swift in Sources */,
+				BB2EC3ED2816DFFB00806EBD /* PageContentView.swift in Sources */,
 				BB2EC3B72816DE8600806EBD /* TypographyCourseApp.swift in Sources */,
+				BB2EC3EF2816E00E00806EBD /* PageNavigationView.swift in Sources */,
+				BB2EC4012816E0C100806EBD /* AppPlaygroundView.swift in Sources */,
+				BB2EC4032816E0D900806EBD /* AppState.swift in Sources */,
+				BB2EC3F92816E07E00806EBD /* QuizPlaygroundView.swift in Sources */,
+				BB2EC3EB2816DFE300806EBD /* BaseView.swift in Sources */,
+				BB2EC3E72816DF9D00806EBD /* Page.swift in Sources */,
+				BB2EC3E52816DF8000806EBD /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +518,13 @@
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TypographyCourse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -449,11 +549,13 @@
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = TypographyCourse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +565,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

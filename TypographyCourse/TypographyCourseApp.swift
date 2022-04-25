@@ -11,7 +11,7 @@ import SwiftUI
 struct TypographyCourseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BaseView()
         }
     }
 }
