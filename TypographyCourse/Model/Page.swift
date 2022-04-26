@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 /// A Course consists out of pages which have a title and a few PageElements
 public struct Page: Equatable {
     
@@ -18,6 +17,9 @@ public struct Page: Equatable {
     
     /// SFSymbols name for a page
     let titleImageName: String
+    
+    /// Decribes the size of the title image should be adjusted, negative values for smaller images, positive values for larger images
+    let titleImageSizeAdjustment: CGFloat
     
     /// value of type PlaygroundView (enumeration defined in Content.swift) that refers to a playgroundView that will be shown on the right
     let playgroundView: PlaygroundViews

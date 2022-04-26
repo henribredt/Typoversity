@@ -44,7 +44,7 @@ struct HierarchyPlaygroundView: View {
     }
     
     func checkChallengeCompleted(){
-        if (titleWeight == .heavy || titleWeight  == .bold) && (titleFontSize > 31 && titleFontSize < 41) {
+        if (titleWeight == .heavy || titleWeight  == .bold) && (titleFontSize > 30 && titleFontSize < 41) {
             /// currently opend page
             let currentPage = BasicsCourse[appState.currentPage]
             // Mark lesson as completed
@@ -111,7 +111,7 @@ struct FontSizeSelector: View {
     
     var body: some View {
         HStack{
-            if fontSize > 31 && fontSize < 41 {
+            if fontSize > 30 && fontSize < 41 {
                 Image(systemName: "checkmark.circle.fill")
                     .resizable()
                     .scaledToFit()

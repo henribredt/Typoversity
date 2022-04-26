@@ -64,6 +64,8 @@ struct PageNavigationView: View {
     
     //  MARK: pageOverview
     /// shows all availabe pages in a course including its completion status and allows navigation
+    
+   
     var pageOverview: some View {
         VStack(alignment: .leading){
             ScrollView{
@@ -73,7 +75,6 @@ struct PageNavigationView: View {
                             let index = BasicsCourse.firstIndex(of: page) ?? 0
                             appState.currentPage = index
                         } label: {
-                            
                             HStack{
                                 if (appState.completionProgress.contains(page.id)) {
                                     Image(systemName: "checkmark.circle.fill")
@@ -89,7 +90,7 @@ struct PageNavigationView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .foregroundColor(Color.accentColor)
-                                        .frame(width: 20, height: 20)
+                                        .frame(width: 20 + page.titleImageSizeAdjustment, height: 20 + page.titleImageSizeAdjustment)
                                         .padding(5)
                                         .padding(.trailing, 4)
                                         .transition(.scale.combined(with: .opacity))
@@ -97,6 +98,8 @@ struct PageNavigationView: View {
                                 Text(page.title)
                                     .font(.callout)
                                     .foregroundColor(.primary)
+                                    .padding(.leading, 3 + (appState.completionProgress.contains(page.id) ? 0 : (page.titleImageSizeAdjustment * -1)) )
+                                    .animation(Animation.timingCurve(0.3, 0.99, 0.43, 0.99, duration: 0.5), value: appState.completionProgress)
                                 Spacer()
                             }
                             .padding(10)

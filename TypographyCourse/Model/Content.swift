@@ -1,7 +1,7 @@
 import SwiftUI
 
 // This file contains all content that app displays, organized with Pages
-let BasicsCourse : [Page] = [welcome, fonts, hierarchy, detail, quiz]
+let BasicsCourse : [Page] = [welcome, fonts, hierarchy, alignment, spacing, detail, quiz]
 
 /// All avalible PlaygroundViews that PageContentView can darw
 /// The switch case in PageContentView must cover that case for a view to appear
@@ -26,6 +26,7 @@ let welcome = Page(
     contentSubTitle: "Welcome",
     contentTitle: "Typography Basics Crashcourse",
     titleImageName: "graduationcap.fill",
+    titleImageSizeAdjustment: 0,
     playgroundView: .welcomePlaygroundView,
     elements: [
         PageText("This course introduces you to fundamental rules of typography. When you're done, you'll know how to work with text better than the vast majority of people. Please be aware that this course covers the basics, there's still a whole lot more to explore."),
@@ -44,6 +45,7 @@ let fonts = Page(
     contentSubTitle: "Lesson 1",
     contentTitle: "Use one font",
     titleImageName: "textformat",
+    titleImageSizeAdjustment: 0,
     playgroundView: .fontsPlaygroundView,
     elements: [
         PageText("Fonts are the foundational building block of every typography work. There are countless fonts available, but they all fall into a few font categories. You can discover the most common of those below."),
@@ -63,7 +65,8 @@ let hierarchy = Page(
     title: "Hierarchy",
     contentSubTitle: "Lesson 2",
     contentTitle: "Skip a weight and create hierarchy",
-    titleImageName: "text.alignleft",
+    titleImageName: "list.bullet", // text.alignleft
+    titleImageSizeAdjustment: 0,
     playgroundView: .hierarchyPlaygroundView,
     elements: [
         PageText("Good typography lets readers easily understand the semantics of different paragraphs in a layout. We use hierarchy to achieve that desired effect."),
@@ -79,12 +82,48 @@ let hierarchy = Page(
     ]
 )
 
+let alignment = Page(
+    id: "basics_alignment",
+    title: "Alignment",
+    contentSubTitle: "Lesson 3",
+    contentTitle: "Left align text",
+    titleImageName: "align.horizontal.left", // align.horizontal.left.fill
+    titleImageSizeAdjustment: 0,
+    playgroundView: .appPlaygroundView,
+    elements: [
+        PageText("For a perciese typography would want to align text to a signel line, perferrably the leeft alignment."),
+        PageHeadline("Attention", topSpacing: true),
+        PageText("If you design for a right to left language, you should right align the text"),
+        PageTask("On the right you will see a typographic news app with a poor usage of alignment.", subTasks: ["Take some time to experiment, how diffrent combinations feel", "Use the controls below to fix the aligmentens"]),
+        PageDivider(),
+        PageHeadline("Break the rules", topSpacing: false),
+        PageText("There can always be situations, in wich a centerd alignment is more appropriete, you can always do that, but when i doubt, left align your text."),
+    ]
+)
+
+let spacing = Page(
+    id: "basics_contrast",
+    title: "Spacing",
+    contentSubTitle: "Lesson 4",
+    contentTitle: "The secret to fonts is use just one",
+    titleImageName: "arrow.left.and.right", //mount ruler decrease.indent
+    titleImageSizeAdjustment: -2,
+    playgroundView: .kerningPlaygroundView,
+    elements: [
+        PageHeadline("Introduction to Fonts", topSpacing: true),
+        PageText("Fonts are the foundational building block of every tyograhphy work. Typograyh is making art with letters, and yes, thats art too!"),
+        PageTask("Be happy", subTasks: ["Whats good?"])
+    ]
+)
+ 
+
 let detail = Page(
     id: "basics_detail",
-    title: "Detail typography",
-    contentSubTitle: "Lesson 3",
+    title: "Tracking",
+    contentSubTitle: "Lesson 5",
     contentTitle: "Pay attention to detail",
-    titleImageName: "text.magnifyingglass",
+    titleImageName: "textformat.abc.dottedunderline", // text.magnifyingglass
+    titleImageSizeAdjustment: 2,
     playgroundView: .kerningPlaygroundView,
     elements: [
         PageText("For this last lesson, we will take a look at something more advanced in typography, kerning and tracking of letters and fonts."),
@@ -102,6 +141,7 @@ let quiz = Page(
     contentSubTitle: "Final Quiz",
     contentTitle: "Check your knowledge",
     titleImageName: "brain.head.profile",
+    titleImageSizeAdjustment: 0,
     playgroundView: .quizPlaygroundView,
     elements: [
         PageText("Congratulations for making it that far! You've made your way through some of the most fundamental rules of typography, had the chance to apply them and now have a head start in typography. There's one last challenge for you that will put to the test, what you have learned."),
@@ -110,41 +150,3 @@ let quiz = Page(
         PageText("Thank you for taking the time to complete this course, I hope you enjoyed it and that you've learned something new. Have a great WWDC, see you there!", topSpacing: true),
     ]
 )
-
-/*
- 
-// not included yet
-let DemoPageContent = Page(
-    id: "basics_alignment",
-    title: "Alignment",
-    contentSubTitle: "Lesson 2",
-    contentTitle: "Left align text",
-    titleImageName: "align.horizontal.left.fill",
-    playgroundView: .appPlaygroundView,
-    elements: [
-        PageText("For a perciese typography would want to align text to a signel line, perferrably the leeft alignment."),
-        PageHeadline("Attention", topSpacing: true),
-        PageText("If you design for a right to left language, you should right align the text"),
-        PageTask("On the right you will see a typographic news app with a poor usage of alignment.", subTasks: ["Take some time to experiment, how diffrent combinations feel", "Use the controls below to fix the aligmentens"]),
-        PageDivider(),
-        PageHeadline("Break the rules", topSpacing: false),
-        PageText("There can always be situations, in wich a centerd alignment is more appropriete, you can always do that, but when i doubt, left align your text."),
-    ]
-)
-
-// not inclueded
-let MorePage = Page(
-    id: "basics_contrast",
-    title: "Contrast",
-    contentSubTitle: "Lesson 4",
-    contentTitle: "The secret to fonts is use just one",
-    titleImageName: "circle.lefthalf.filled",
-    playgroundView: .kerningPlaygroundView,
-    elements: [
-        PageHeadline("Introduction to Fonts", topSpacing: true),
-        PageText("Fonts are the foundational building block of every tyograhphy work. Typograyh is making art with letters, and yes, thats art too!"),
-        PageTask("Be happy", subTasks: ["Whats good?"])
-    ]
-)
- 
-*/
