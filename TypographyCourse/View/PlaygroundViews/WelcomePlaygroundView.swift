@@ -1,3 +1,4 @@
+import ConfettiSwiftUI
 import SwiftUI
 
 struct WelcomePlaygroundView: View {
@@ -5,6 +6,8 @@ struct WelcomePlaygroundView: View {
     // manage user progress
     @ObservedObject var appState: AppState
     
+    // animation values
+    @State private var cofettiAnimationValue: Int = 0
     
     /// currently opend page
     var currentPage : Page {
@@ -35,14 +38,11 @@ struct WelcomePlaygroundView: View {
                         let currentPage = BasicsCourse[appState.currentPage]
                         // Mark lesson as completed
                         appState.appendToCompletionProgress(id: currentPage.id)
+                        cofettiAnimationValue += 1
                     } label: {
-                        Text("Got it")
-                            .padding(12)
-                            .padding(.leading, 15)
-                            .padding(.trailing, 15)
-                            .background(Color.accentColor.opacity(0.1))
-                            .cornerRadius(10)
+                        InteractableView(basePadding: 12, sidePadding: 8) { Text("Got it") }
                             .transition(.scale.combined(with: .opacity))
+                            .padding(2.5)
                     }
                     
                 } else {
@@ -54,9 +54,13 @@ struct WelcomePlaygroundView: View {
                         .padding(5)
                         .padding(.trailing, 4)
                         .transition(.scale.combined(with: .opacity))
+                        .onTapGesture {
+                            cofettiAnimationValue += 1
+                        }
                 }
             }
             .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5), value: appState.completionProgress)
+            .confettiCannon(counter: $cofettiAnimationValue)
             
         }
         .animation(Animation.timingCurve(0.16, 0.9, 0.51, 1, duration: 0.3), value: appState.completionProgress)

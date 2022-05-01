@@ -22,6 +22,8 @@ struct PagePlaygroundView: View {
                 HierarchyPlaygroundView(appState: appState)
             case .appPlaygroundView:
                 AppPlaygroundView(appState: appState)
+            case .alignmentPlaygroundView:
+                AlignmentPlaygroundView(appState: appState)
             case .kerningPlaygroundView:
                 KerningPlaygroundView(appState: appState)
             case .quizPlaygroundView:

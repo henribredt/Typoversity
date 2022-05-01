@@ -4,6 +4,8 @@ struct PageNavigationView: View {
     
     public init(appState: AppState) { self.appState = appState }
     
+    @Environment(\.colorScheme) private var colorScheme
+    
     /// manage user progress
     @ObservedObject private var appState: AppState
     
@@ -103,7 +105,7 @@ struct PageNavigationView: View {
                                 Spacer()
                             }
                             .padding(10)
-                            .background(page.id == BasicsCourse[appState.currentPage].id ? Color.accentColor.opacity(0.1) : Color.clear )
+                            .background(page.id == BasicsCourse[appState.currentPage].id ? Color.accentColor.opacity(colorScheme == .light ? 0.1 : 0.14) : Color.clear )
                             .cornerRadius(10)
                         }
                     }

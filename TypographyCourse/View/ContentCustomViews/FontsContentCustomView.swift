@@ -3,7 +3,7 @@ import SwiftUI
 struct FontsContentCustomView: View {
     @State private var selectedType = 0
     @State private var font: Font = .system(size: 30, weight: .medium, design: .default)
-    @State private var text = "Font Sans Serif"
+    @State private var text = "Sans Serif Font"
     
     var body: some View {
         VStack {

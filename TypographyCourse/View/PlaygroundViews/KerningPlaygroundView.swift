@@ -84,7 +84,7 @@ struct KerningPlaygroundView: View {
                     .font(.callout)
                     .padding(5)
                     .animation(.none, value: kerning)
-                Slider(value: $kerning.animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5)), in: -8.0...8.0)
+                Slider(value: $kerning.animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5)), in: -6.0...8.0)
                     .animation(.none, value: kerning)
                 Text("\(kerning, specifier: "%.00f")")
                     .monospacedDigit()

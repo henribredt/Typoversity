@@ -44,7 +44,7 @@ struct HierarchyPlaygroundView: View {
     }
     
     func checkChallengeCompleted(){
-        if (titleWeight == .heavy || titleWeight  == .bold) && (titleFontSize > 30 && titleFontSize < 41) {
+        if (titleWeight == .heavy || titleWeight  == .bold) && (titleFontSize > 28 && titleFontSize < 41) {
             /// currently opend page
             let currentPage = BasicsCourse[appState.currentPage]
             // Mark lesson as completed
@@ -111,7 +111,7 @@ struct FontSizeSelector: View {
     
     var body: some View {
         HStack{
-            if fontSize > 30 && fontSize < 41 {
+            if fontSize > 28 && fontSize < 41 {
                 Image(systemName: "checkmark.circle.fill")
                     .resizable()
                     .scaledToFit()
@@ -175,27 +175,23 @@ struct FontWeightSelector: View {
                 .padding(5)
                 .animation(.none, value: fontWeight)
            
-            HStack(spacing: 0) {
-                Image(systemName: "chevron.down")
-                    .font(.caption.weight(.semibold))
-                    .foregroundColor(.accentColor)
-                    .padding(.trailing, 12)
-                Picker("Fontweight", selection: $selection, content: {
-                    Text("Light").tag(0)
-                    Text("Regular").tag(1)
-                    Text("Medium").tag(2)
-                    Text("Semibold").tag(3)
-                    Text("Bold").tag(4)
-                    Text("Heavy").tag(5)
-                })
-                Spacer()
+            InteractableView(basePadding: 7, sidePadding: 7){
+                HStack(spacing: 0) {
+                    Image(systemName: "chevron.down")
+                        .font(.caption.weight(.semibold))
+                        .foregroundColor(.accentColor)
+                        .padding(.trailing, 12)
+                    Picker("Fontweight", selection: $selection, content: {
+                        Text("Light").tag(0)
+                        Text("Regular").tag(1)
+                        Text("Medium").tag(2)
+                        Text("Semibold").tag(3)
+                        Text("Bold").tag(4)
+                        Text("Heavy").tag(5)
+                    })
+                    Spacer()
+                }
             }
-            .padding(.leading, 15)
-            .padding(.trailing, 15)
-            .padding(.top, 5)
-            .padding(.bottom, 5)
-            .background(Color.accentColor.opacity(0.1))
-            .cornerRadius(10)
             .onChange(of: selection) { newValue in
                 switch newValue {
                 case 0: fontWeight = .light

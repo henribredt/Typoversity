@@ -1,3 +1,4 @@
+import ConfettiSwiftUI
 import SwiftUI
 
 struct QuizPlaygroundView: View {
@@ -18,7 +19,9 @@ struct QuizPlaygroundView: View {
     @State private var currentAnswerIsFalse = false
     @State private var isAnimating = false
     
+    // animation values
     @State var animateShake: Int = 0
+    @State private var cofettiAnimationValue: Int = 0
     
     // Quiz data
     private var questions = ["If you wanted to design the text on a website, what font would you choose?", "Which statement is wrong?", "Too much tracking causes a text to become difficult to read because letters overlap."]
@@ -36,7 +39,7 @@ struct QuizPlaygroundView: View {
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                                 .padding(.bottom, 8)
-                                
+                            
                             Text(questions[currentQuestionIndex])
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.center)
@@ -97,16 +100,15 @@ struct QuizPlaygroundView: View {
                                     }
                                     
                                 } label: {
-                                    HStack{
-                                        Spacer()
-                                        Text(answers[currentQuestionIndex][index])
-                                            .font(.callout)
-                                            .foregroundColor(.accentColor)
-                                        Spacer()
+                                    InteractableView(basePadding: 15, sidePadding: 0) {
+                                        HStack{
+                                            Spacer()
+                                            Text(answers[currentQuestionIndex][index])
+                                                .font(.callout)
+                                                .foregroundColor(.accentColor)
+                                            Spacer()
+                                        }
                                     }
-                                    .padding(12)
-                                    .background(Color.accentColor.opacity(0.13))
-                                    .cornerRadius(10)
                                 }
                                 .padding(3)
                             }
@@ -183,6 +185,9 @@ struct QuizPlaygroundView: View {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.green)
                     .font(.largeTitle)
+                    .onTapGesture {
+                        cofettiAnimationValue += 1
+                    }
                 Text("Congratulations, you have successfully completed the quiz")
                     .padding(.leading, 5)
                     .foregroundColor(Color.primary)
@@ -193,15 +198,15 @@ struct QuizPlaygroundView: View {
                         quizCompleted = false
                     }
                 } label: {
-                    Text("Restart")
-                        .padding(12)
-                        .padding(.leading, 7)
-                        .padding(.trailing, 7)
-                        .background(Color.accentColor.opacity(0.1))
-                        .cornerRadius(10)
+                    InteractableView(basePadding: 12, sidePadding: 7) { Text("Restart") }
                 }
                 .padding(.top, 50)
-                
+                .confettiCannon(counter: $cofettiAnimationValue).zIndex(-10)
+                .onAppear{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                        cofettiAnimationValue += 1
+                    }
+                }
             }
             Spacer()
         }

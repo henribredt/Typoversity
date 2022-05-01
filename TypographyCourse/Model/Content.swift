@@ -10,6 +10,7 @@ enum PlaygroundViews {
     case fontsPlaygroundView
     case hierarchyPlaygroundView
     case appPlaygroundView
+    case alignmentPlaygroundView
     case kerningPlaygroundView
     case quizPlaygroundView
 }
@@ -89,15 +90,14 @@ let alignment = Page(
     contentTitle: "Left align text",
     titleImageName: "align.horizontal.left", // align.horizontal.left.fill
     titleImageSizeAdjustment: 0,
-    playgroundView: .appPlaygroundView,
+    playgroundView: .alignmentPlaygroundView,
     elements: [
-        PageText("For a perciese typography would want to align text to a signel line, perferrably the leeft alignment."),
-        PageHeadline("Attention", topSpacing: true),
-        PageText("If you design for a right to left language, you should right align the text"),
-        PageTask("On the right you will see a typographic news app with a poor usage of alignment.", subTasks: ["Take some time to experiment, how diffrent combinations feel", "Use the controls below to fix the aligmentens"]),
-        PageDivider(),
-        PageHeadline("Break the rules", topSpacing: false),
-        PageText("There can always be situations, in wich a centerd alignment is more appropriete, you can always do that, but when i doubt, left align your text."),
+        PageText("Your text alignment choice has a huge influence on the readbility of a text. Most of the time, aligning text left is your best option, some times you can work with centered texts but never, never uses justified alignment, as the inconstent spacing between the words, makes reading more demanding — we don't care that I may look a bit sleeker sometimes."),
+        PageHeadline("Right align", topSpacing: true),
+        PageText("In left to right languages, don't align text to the right, however there are also languages, in which text is read from right to left. If you are designing for such a language, choose the right align. Supporting the natual language flow with you alignmend improves readability."),
+        PageTask("There's a paragraph on the right, play around with the diffrent alignment options, and finally choose the best fitting one."),
+        PageHeadline("Summary", topSpacing: true),
+        PageText("In left to right languages, left align you're text. Body text should always be left aligned, other text may be centered, but be sure to stick to a consisten system."),
     ]
 )
 

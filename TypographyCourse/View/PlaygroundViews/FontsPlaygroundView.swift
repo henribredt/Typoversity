@@ -14,7 +14,7 @@ struct FontsPlaygroundView: View {
     @State private var titleSelection = 1
     @State private var titleFont: Font = .system(size: 25, weight: .semibold, design: .serif)
     @State private var titleCorrect = false
-
+    
     // body
     @State private var bodySelection = 1
     @State private var bodyFont: Font = .system(size: 17, weight: .regular, design: .serif)
@@ -23,18 +23,20 @@ struct FontsPlaygroundView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             Spacer()
-            VStack(alignment: .leading, spacing: 10){
-                Text("2h ago • Technology")
-                    .font(subTitleFont)
-                Text("Apple announces WWDC22 online event with keynote public viewing at Apple Park")
-                    .lineSpacing(1.5)
-                    .font(titleFont)
-                    .padding(.bottom, 12)
-                Text("This morning Apple announced it will host its annual Worldwide Developers Conference this year again in an online format from June 6 through 10, free for all developers to attend. WWDC22 features the latest innovations on Apple plattforms, while giving developers access to engineers and technologies to learn how to create stunning apps and interactive experiences. For the first time there will be a public viewing of the keynote at Apple Park.")
-                    .lineSpacing(2.5)
-                    .font(bodyFont)
+            ScrollView{
+                VStack(alignment: .leading, spacing: 10){
+                    Text("2h ago • Technology")
+                        .font(subTitleFont)
+                    Text("Apple announces WWDC22 online event with keynote public viewing at Apple Park")
+                        .lineSpacing(1.5)
+                        .font(titleFont)
+                        .padding(.bottom, 12)
+                    Text("This morning Apple announced it will host its annual Worldwide Developers Conference this year again in an online format from June 6 through 10, free for all developers to attend. WWDC22 features the latest innovations on Apple plattforms, while giving developers access to engineers and technologies to learn how to create stunning apps and interactive experiences. For the first time there will be a public viewing of the keynote at Apple Park.")
+                        .lineSpacing(2.5)
+                        .font(bodyFont)
+                }
+                .padding()
             }
-            .padding()
             Spacer()
             Spacer()
             VStack(alignment: .leading){
@@ -127,26 +129,22 @@ struct FontSelector: View {
             }
             .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5), value: correct)
             
-            HStack(spacing: 0) {
-                Image(systemName: "chevron.down")
-                    .font(.caption.weight(.semibold))
-                    .foregroundColor(.accentColor)
-                    .padding(.trailing, 12)
-                Picker(title, selection: $selection, content: {
-                    Text("New York").tag(1)
-                    Text("San Francisco").tag(0)
-                    Text("San Francisco Mono").tag(3)
-                    Text("American Typewriter").tag(2)
-                    Text("Snell Roundhand").tag(4)
-                })
-                Spacer()
+            InteractableView(basePadding: 7, sidePadding: 7) {
+                HStack(spacing: 0) {
+                    Image(systemName: "chevron.down")
+                        .font(.caption.weight(.semibold))
+                        .foregroundColor(.accentColor)
+                        .padding(.trailing, 12)
+                    Picker(title, selection: $selection, content: {
+                        Text("Serif").tag(1) //New York
+                        Text("Sans Serif").tag(0) //San Francisco
+                        Text("Monospaced").tag(3) // San Francisco Mono
+                        Text("Slab Serif").tag(2) //American Typewriter
+                        Text("Script").tag(4) // Snell Roundhand
+                    })
+                    Spacer()
+                }
             }
-            .padding(.leading, 15)
-            .padding(.trailing, 15)
-            .padding(.top, 5)
-            .padding(.bottom, 5)
-            .background(Color.accentColor.opacity(0.1))
-            .cornerRadius(10)
         }
     }
 }

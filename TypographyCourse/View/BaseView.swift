@@ -9,7 +9,7 @@ struct BaseView: View {
         HStack(spacing: 0){
             // Navigation
             PageNavigationView(appState: appState)
-                .frame(width: 295)
+                .frame(width: 270)
             
             // Content
             PageContentView(appState: appState)

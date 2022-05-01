@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AboutView: View {
-    
+
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -32,7 +32,11 @@ struct AboutView: View {
                     .multilineTextAlignment(.center)
             }
             .padding(.top)
+            .padding(.bottom)
             .padding(.bottom, 60)
+            
+//            SupporterView(text: "You're a supporter, thank you!")
+//                .padding(.bottom, 60)
             
             
             ScrollView(showsIndicators: false){
@@ -61,12 +65,7 @@ struct AboutView: View {
             Button {
                 dismiss()
             } label: {
-                Text("Dismiss")
-                    .padding(12)
-                    .padding(.leading, 6)
-                    .padding(.trailing, 6)
-                    .background(Color.accentColor.opacity(0.1))
-                    .cornerRadius(10)
+                InteractableView(basePadding: 12, sidePadding: 7) {  Text("Dismiss") }
             }
             .padding()
         }
@@ -77,6 +76,9 @@ struct AboutView: View {
 
 // MARK: Callout View
 struct CalloutView: View {
+    
+    @Environment(\.colorScheme) private var colorScheme
+    
     var systemName: String
     var text: String
     
@@ -88,10 +90,8 @@ struct CalloutView: View {
                 .foregroundColor(Color.accentColor)
                 .frame(width: 20, height: 20)
                 .padding(10)
-                .background(
-                    Color.accentColor.opacity(0.1)
-                        .cornerRadius(10)
-                )
+                .background(Color.accentColor.opacity(colorScheme == .light ? 0.1 : 0.14))
+                .cornerRadius(10)
                 .padding(.trailing, 20)
             Text(try! AttributedString(markdown: text))
                 .font(.footnote)
@@ -100,14 +100,34 @@ struct CalloutView: View {
     }
 }
 
+
+// MARK: Callout View
+struct SupporterView: View {
+    var text: String
+    
+    var body: some View {
+
+        Text(text)
+            .font(.caption)
+            .foregroundColor(Color.accentColor)
+            .padding(8)
+            .padding(.leading, 6)
+            .padding(.trailing, 6)
+            .background(
+                Color.accentColor.opacity(0.1)
+                    .cornerRadius(30)
+            )
+    }
+}
+
 // MARK: String extension: toMarkdown()
 extension String {
-  func toMarkdown() -> AttributedString {
-    do {
-      return try AttributedString(markdown: self)
-    } catch {
-      print("Error parsing Markdown for string \(self): \(error)")
-      return AttributedString(self)
+    func toMarkdown() -> AttributedString {
+        do {
+            return try AttributedString(markdown: self)
+        } catch {
+            print("Error parsing Markdown for string \(self): \(error)")
+            return AttributedString(self)
+        }
     }
-  }
 }
