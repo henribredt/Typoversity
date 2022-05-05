@@ -134,6 +134,11 @@ struct PageContentView : View {
                                 FontsContentCustomView()
                                     .padding(.top, pageCustomView.topSpacing ? topBottomSpacingValue : 0)
                                     .padding(.bottom, pageCustomView.bottomSpacing ? topBottomSpacingValue : 0)
+                           
+                        case ContentCustomView.hierarchyContentCustomView:
+                            HierarchyContentCustomView()
+                                .padding(.top, pageCustomView.topSpacing ? topBottomSpacingValue : 0)
+                                .padding(.bottom, pageCustomView.bottomSpacing ? topBottomSpacingValue : 0)
                             }
                         }
                     }

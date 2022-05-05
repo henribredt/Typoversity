@@ -9,16 +9,19 @@ struct FontsPlaygroundView: View {
     @State private var subTitleSelection = 2
     @State private var subTitleFont: Font = Font.custom("American Typewriter", size: 14).weight(.regular)
     @State private var subTitleCorrect = false
+    @State private var subTitleAreaAnimationValue = false
     
     // title
     @State private var titleSelection = 1
     @State private var titleFont: Font = .system(size: 25, weight: .semibold, design: .serif)
     @State private var titleCorrect = false
+    @State private var titleAreaAnimationValue = false
     
     // body
     @State private var bodySelection = 1
     @State private var bodyFont: Font = .system(size: 17, weight: .regular, design: .serif)
     @State private var bodyCorrect = false
+    @State private var bodyAreaAnimationValue = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
@@ -27,22 +30,25 @@ struct FontsPlaygroundView: View {
                 VStack(alignment: .leading, spacing: 10){
                     Text("2h ago • Technology")
                         .font(subTitleFont)
+                        .highlightable(padding: 6, animationValue: $subTitleAreaAnimationValue)
                     Text("Apple announces WWDC22 online event with keynote public viewing at Apple Park")
                         .lineSpacing(1.5)
                         .font(titleFont)
+                        .highlightable(padding: 6, animationValue: $titleAreaAnimationValue)
                         .padding(.bottom, 12)
                     Text("This morning Apple announced it will host its annual Worldwide Developers Conference this year again in an online format from June 6 through 10, free for all developers to attend. WWDC22 features the latest innovations on Apple plattforms, while giving developers access to engineers and technologies to learn how to create stunning apps and interactive experiences. For the first time there will be a public viewing of the keynote at Apple Park.")
                         .lineSpacing(2.5)
                         .font(bodyFont)
+                        .highlightable(padding: 6, animationValue: $bodyAreaAnimationValue)
                 }
                 .padding()
             }
             Spacer()
             Spacer()
             VStack(alignment: .leading){
-                FontSelector(selection: $subTitleSelection, correct: $subTitleCorrect, title: "Subtitle")
-                FontSelector(selection: $titleSelection, correct: $titleCorrect, title: "Title")
-                FontSelector(selection: $bodySelection, correct: $bodyCorrect, title: "Body")
+                FontSelector(selection: $subTitleSelection, correct: $subTitleCorrect, animationValue: $subTitleAreaAnimationValue, title: "Subtitle")
+                FontSelector(selection: $titleSelection, correct: $titleCorrect, animationValue: $titleAreaAnimationValue, title: "Title")
+                FontSelector(selection: $bodySelection, correct: $bodyCorrect, animationValue: $bodyAreaAnimationValue, title: "Body")
             }
             .onChange(of: subTitleSelection) { newValue in
                 updateFont(tag: newValue, font: &subTitleFont, size: 14, weight: .regular)
@@ -95,6 +101,7 @@ struct FontSelector: View {
     
     @Binding var selection: Int
     @Binding var correct: Bool
+    @Binding var animationValue: Bool
     var title: String
     
     var body: some View {
@@ -142,6 +149,12 @@ struct FontSelector: View {
                         Text("Slab Serif").tag(2) //American Typewriter
                         Text("Script").tag(4) // Snell Roundhand
                     })
+                    .onTapGesture {
+                        animationValue = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8, execute: {
+                            animationValue = false
+                        })
+                    }
                     Spacer()
                 }
             }

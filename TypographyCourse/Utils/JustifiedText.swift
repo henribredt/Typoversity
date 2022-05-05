@@ -11,25 +11,33 @@ import SwiftUI
 /// Usage: JustifiedText("...")
 
 struct JustifiedText: UIViewRepresentable {
-    private let text: String
-    private let font: UIFont
-    private let fontColor: UIColor
+    let text: String
+    let font: UIFont
+    let fontColor: UIColor
+    @Binding var textAlignment: NSTextAlignment
     
-    init(font: UIFont = .systemFont(ofSize: 18), color: UIColor = .label, _ text: String) {
+    init(font: UIFont = .systemFont(ofSize: 18), color: UIColor = .label, textAlignment: Binding<NSTextAlignment>, _ text: String) {
         self.text = text
         self.font = font
         self.fontColor = color
+        _textAlignment = textAlignment
     }
     
     func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()
+        textView.text = text
         textView.font = font
-        textView.textAlignment = .justified
+        textView.textAlignment = textAlignment
         textView.textColor = fontColor
+        textView.backgroundColor = .cyan
+        textView.setContentHuggingPriority(.defaultHigh, for: .horizontal) // << here !!
+        textView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        textView.textContainer.lineFragmentPadding = 0
+
         return textView
     }
     
     func updateUIView(_ uiView: UITextView, context: Context) {
-        uiView.text = text
+        uiView.textAlignment = textAlignment
     }
 }
