@@ -30,6 +30,7 @@
 		BB2EC4032816E0D900806EBD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC4022816E0D900806EBD /* AppState.swift */; };
 		BB3DA850281F304700F1FC0C /* InteractableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3DA84F281F304700F1FC0C /* InteractableView.swift */; };
 		BB6400AA2824025F00B29DE5 /* highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6400A92824025F00B29DE5 /* highlightable.swift */; };
+		BB6400AC28241C2B00B29DE5 /* SpacingPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6400AB28241C2B00B29DE5 /* SpacingPlaygroundView.swift */; };
 		BB69E7EB281BC9CB00556515 /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69E7EA281BC9CB00556515 /* JustifiedText.swift */; };
 		BB69E7ED281BCA2800556515 /* AlignmentPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69E7EC281BCA2800556515 /* AlignmentPlaygroundView.swift */; };
 		BB9AB012281BE443004E0BE4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BB9AB011281BE443004E0BE4 /* ConfettiSwiftUI */; };
@@ -81,6 +82,7 @@
 		BB2EC4022816E0D900806EBD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BB3DA84F281F304700F1FC0C /* InteractableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractableView.swift; sourceTree = "<group>"; };
 		BB6400A92824025F00B29DE5 /* highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highlightable.swift; sourceTree = "<group>"; };
+		BB6400AB28241C2B00B29DE5 /* SpacingPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingPlaygroundView.swift; sourceTree = "<group>"; };
 		BB69E7EA281BC9CB00556515 /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		BB69E7EC281BCA2800556515 /* AlignmentPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentPlaygroundView.swift; sourceTree = "<group>"; };
 		BBE2CB1628212D690016C240 /* HierarchyContentCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyContentCustomView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BB2EC3FE2816E0B300806EBD /* FontsPlaygroundView.swift */,
 				BB2EC4002816E0C100806EBD /* AppPlaygroundView.swift */,
 				BB69E7EC281BCA2800556515 /* AlignmentPlaygroundView.swift */,
+				BB6400AB28241C2B00B29DE5 /* SpacingPlaygroundView.swift */,
 			);
 			path = PlaygroundViews;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				BB2EC3FB2816E09000806EBD /* KerningPlaygroundView.swift in Sources */,
 				BBE2CB1728212D690016C240 /* HierarchyContentCustomView.swift in Sources */,
 				BB2EC3F42816E03B00806EBD /* FontsContentCustomView.swift in Sources */,
+				BB6400AC28241C2B00B29DE5 /* SpacingPlaygroundView.swift in Sources */,
 				BB2EC3FD2816E0A200806EBD /* HierarchyPlaygroundView.swift in Sources */,
 				BB2EC3F12816E01D00806EBD /* PagePlaygroundView.swift in Sources */,
 				BB2EC3F72816E06800806EBD /* WelcomePlaygroundView.swift in Sources */,
@@ -557,7 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -574,7 +578,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.henribredt.Typoversity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -606,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.henribredt.Typoversity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

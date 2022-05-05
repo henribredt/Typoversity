@@ -16,6 +16,7 @@ struct WelcomePlaygroundView: View {
     
     var body: some View {
         VStack{
+            Spacer()
             Image(systemName: "character.cursor.ibeam")
                 .resizable()
                 .scaledToFit()
@@ -61,7 +62,7 @@ struct WelcomePlaygroundView: View {
             }
             .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5), value: appState.completionProgress)
             .confettiCannon(counter: $cofettiAnimationValue)
-            
+            Spacer()
         }
         .animation(Animation.timingCurve(0.16, 0.9, 0.51, 1, duration: 0.3), value: appState.completionProgress)
     }

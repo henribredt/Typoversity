@@ -3,6 +3,18 @@ import SwiftUI
 /// A Course consists out of pages which have a title and a few PageElements
 public struct Page: Equatable {
     
+    public init(id: String, title: String, contentSubTitle: String, contentTitle: String, titleImageName: String, titleImageSizeAdjustment: CGFloat, playgroundView: PlaygroundViews, challengeHelp: String? = nil, elements: [PageElement]) {
+        self.id = id
+        self.title = title
+        self.contentSubTitle = contentSubTitle
+        self.contentTitle = contentTitle
+        self.titleImageName = titleImageName
+        self.titleImageSizeAdjustment = titleImageSizeAdjustment
+        self.playgroundView = playgroundView
+        self.challengeHelp = challengeHelp
+        self.elements = elements
+    }
+    
     /// unique identifier
     var id: String
     
@@ -24,6 +36,9 @@ public struct Page: Equatable {
     /// value of type PlaygroundView (enumeration defined in Content.swift) that refers to a playgroundView that will be shown on the right
     let playgroundView: PlaygroundViews
     
+    /// Help text for challenge of a page, if not nill a  questionmark will displayed obve in the top left corner of the playground view
+    let challengeHelp: String?
+    
     /// composition of a page, consists out of PageElements that will be drawn in the view
     let elements: [PageElement]
     
@@ -36,7 +51,7 @@ public struct Page: Equatable {
 /// common type of all PageElements that will be drawn on the page
 /// ensures that ever PageElement has an id and top & bottom spacing
 /// Objects of type PageElements shall not be created, instead uses childs like PageText that can be drawn
-class PageElement {
+public class PageElement {
     
     var id: UUID
     var topSpacing: Bool

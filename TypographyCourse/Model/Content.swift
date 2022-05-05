@@ -5,19 +5,19 @@ let BasicsCourse : [Page] = [welcome, fonts, hierarchy, alignment, spacing, deta
 
 /// All avalible PlaygroundViews that PageContentView can darw
 /// The switch case in PageContentView must cover that case for a view to appear
-enum PlaygroundViews {
+public enum PlaygroundViews {
     case welcomePlaygroundView
     case fontsPlaygroundView
     case hierarchyPlaygroundView
-    case appPlaygroundView
     case alignmentPlaygroundView
+    case spacingPlaygroundView
     case kerningPlaygroundView
     case quizPlaygroundView
 }
 
 /// All avalible ContentCustomView that PageContentView can darw
 /// The switch case in PageContentView must cover that case for a view to appear
-enum ContentCustomView {
+public enum ContentCustomView {
     case fontsContentCustomView
     case hierarchyContentCustomView
 }
@@ -30,9 +30,12 @@ let welcome = Page(
     titleImageName: "graduationcap.fill",
     titleImageSizeAdjustment: 0,
     playgroundView: .welcomePlaygroundView,
+    challengeHelp: "This challenge aims to introduce you to the playground area and show you its interactability. Click the blue »Got it« button to progress.",
     elements: [
-        PageText("This course introduces you to some fundamental rules of typography. When you're done, you'll know how to work with text better than the vast majority of people. Please be aware that this course covers the basics, there's still a whole lot more to explore."),
+        PageText("This course introduces you to some fundamental rules of typography. In about 15 minutes you can boost you skills on how to work with text and aquire some soldid practical typographic knowledge. After finishing there's still so much more to discover, so let's start right away."),
         PageTask("To apply what you have learned, each lesson challenges you to accomplish a task. Interact with the controls in the Playground view on the right to solve the tasks. For now, simply click the blue button.", topSpacing: true),
+        PageText("If you ever get stuck at a challenge, tap the blue questionmark in the upper right corner to get help.", topSpacing: true),
+        PageDivider(topSpacing: true),
         PageHeadline("Focus on readability", topSpacing: true),
         PageText("Good typography serves one purpose: It makes text greatly readable. It may also serve the purpose of creating an aesthetic visual appearance but readability is the major priority for every typographic work. Make sure that all your choices while working with text align with that goal."),
         PageDivider(topSpacing: true),
@@ -49,6 +52,7 @@ let fonts = Page(
     titleImageName: "textformat",
     titleImageSizeAdjustment: 0,
     playgroundView: .fontsPlaygroundView,
+    challengeHelp: "In this challenge you have to select the right font combination with the three pickers below. If you tab a picker, the view shows you with a blue highlight, which text is going to be edited. Remeber to choose a consistent type face and think about which font category is best suited best for screens.",
     elements: [
         PageText("Fonts are the foundational building block of every typographic work. There are countless fonts available, but they all fall into a few font categories. You can discover the most common of those below."),
         PageCustomView(.fontsContentCustomView, topSpacing: true),
@@ -70,6 +74,7 @@ let hierarchy = Page(
     titleImageName: "list.bullet", // text.alignleft
     titleImageSizeAdjustment: 0,
     playgroundView: .hierarchyPlaygroundView,
+    challengeHelp: "Use the slider below to select a proper font size for the titles in the app, then select a fitting weight. Make sure to select a combination that emphasizes the titles, so that the title semantic is clear.",
     elements: [
         PageText("Good typography lets readers easily understand the semantics of different paragraphs in a layout. We use hierarchy to achieve that desired effect."),
         PageHeadline("Font sizes", topSpacing: true),
@@ -108,14 +113,13 @@ let spacing = Page(
     id: "basics_contrast",
     title: "Spacing",
     contentSubTitle: "Lesson 4",
-    contentTitle: "The secret to fonts is use just one",
+    contentTitle: "Spacing",
     titleImageName: "arrow.left.and.right", //mount ruler decrease.indent
     titleImageSizeAdjustment: -2,
-    playgroundView: .kerningPlaygroundView,
+    playgroundView: .spacingPlaygroundView,
     elements: [
-        PageHeadline("Introduction to Fonts", topSpacing: true),
-        PageText("Fonts are the foundational building block of every tyograhphy work. Typograyh is making art with letters, and yes, thats art too!"),
-        PageTask("Be happy", subTasks: ["Whats good?"])
+        PageHeadline("Title"),
+        PageTask("Smile")
     ]
 )
  
