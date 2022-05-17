@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AboutView: View {
-
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -35,25 +35,27 @@ struct AboutView: View {
             .padding(.bottom)
             .padding(.bottom, 60)
             
-//            SupporterView(text: "You're a supporter, thank you!")
-//                .padding(.bottom, 60)
+            //            SupporterView(text: "You're a supporter, thank you!")
+            //                .padding(.bottom, 60)
             
             
             ScrollView(showsIndicators: false){
                 VStack(alignment: .leading, spacing: 35){
                     CalloutView(
-                        systemName: "swift",
-                        text: "This app was created as a submission for the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. To figure out how capable the iPad and the Swift Playgrounds app are, I have coded the app entirely on iPad. This year's WWDC is still ahead, looking forward to seeing you there and all the good new stuff!"
+                        systemName: "person.crop.circle",
+                        text: "This app was created as a submission for the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. I am a self-taught Swift developer and user experience design student. Learn more about me on my [Website](https://www.henribredt.de) or follow me on [Twitter](https://twitter.com/henricreates) or [Instagram](https://www.instagram.com/henricreates/)."
                     )
                     
-                    CalloutView(
-                        systemName: "person.crop.circle",
-                        text: "I am a self-taught Swift developer and user experience design student with a passion for creating meaningful, simple and long-lasting products. Learn more about me on my [website](https://www.henribredt.de)."
-                    )
+                    
                     
                     CalloutView(
                         systemName: "book.closed.fill",
                         text: "During the creation of this app project I used the following resources as inspiration and for reference: [Typography Tutorial - 10 rules to help you rule type](https://www.youtube.com/watch?v=QrNi9FmdlxY), [Summary of key rules (Typography)](https://practicaltypography.com/summary-of-key-rules.html), [The Beginner's Guide to Typography in Web Design](https://blog.hubspot.com/website/website-typography), [Thinking with Type](https://www.amazon.de/-/en/Ellen-Lupton-ebook/dp/B07PQ9VP3Q/)"
+                    )
+                    
+                    CalloutView(
+                        systemName: "shippingbox.fill",
+                        text: "This app build upon the wonderful work other people have made avaliable open source. Therefore it incoperates the following third party library: [ConfettiSwiftUI](https://github.com/simibac/ConfettiSwiftUI.git) [(MIT License)](https://github.com/simibac/ConfettiSwiftUI/blob/master/LICENSE)"
                     )
                 }
                 .padding(.leading, 35)
@@ -106,7 +108,7 @@ struct SupporterView: View {
     var text: String
     
     var body: some View {
-
+        
         Text(text)
             .font(.caption)
             .foregroundColor(Color.accentColor)

@@ -9,8 +9,8 @@ struct SelectionHighlight: ViewModifier {
             .padding(padding)
             .overlay(
                 RoundedRectangle(cornerRadius: 3)
-                    .stroke(Color.accentColor.opacity(0.75), lineWidth: animationValue ? 1.5 : 0.0)
-                    .animation(Animation.timingCurve(0.65, 0, 0.66, 0.99, duration: 0.4), value: animationValue)
+                    .stroke(Color.accentColor, lineWidth: animationValue ? 1.6 : 0.0)
+                    .animation(Animation.timingCurve(0.65, 0, 0.66, 0.99, duration: 0.6), value: animationValue)
             )
             .padding(-padding)
     }

@@ -130,11 +130,17 @@ struct FontSelector: View {
                 HStack{
                     Text(title)
                         .font(.callout)
+                        .onTapGesture {
+                            animationValue = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8, execute: {
+                                animationValue = false
+                            })
+                        }
                     Spacer()
                 }
                 .frame(width: 64)
             }
-            .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5), value: correct)
+            .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.6), value: correct)
             
             InteractableView(basePadding: 7, sidePadding: 7) {
                 HStack(spacing: 0) {
