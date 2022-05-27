@@ -31,7 +31,6 @@ struct PagePlaygroundView: View {
                     .overlay { Text("Work in progress").font(.title).bold().foregroundColor(.red).rotationEffect(Angle(degrees: -45)) }
             case .alignmentPlaygroundView:
                 AlignmentPlaygroundView(appState: appState)
-                    .overlay { Text("Work in progress").font(.title).bold().foregroundColor(.red).rotationEffect(Angle(degrees: -45)) }
             case .kerningPlaygroundView:
                 KerningPlaygroundView(appState: appState)
             case .quizPlaygroundView:

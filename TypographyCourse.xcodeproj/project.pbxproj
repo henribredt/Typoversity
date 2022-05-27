@@ -31,7 +31,6 @@
 		BB3DA850281F304700F1FC0C /* InteractableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3DA84F281F304700F1FC0C /* InteractableView.swift */; };
 		BB6400AA2824025F00B29DE5 /* highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6400A92824025F00B29DE5 /* highlightable.swift */; };
 		BB6400AC28241C2B00B29DE5 /* SpacingPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6400AB28241C2B00B29DE5 /* SpacingPlaygroundView.swift */; };
-		BB69E7EB281BC9CB00556515 /* JustifiedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69E7EA281BC9CB00556515 /* JustifiedText.swift */; };
 		BB69E7ED281BCA2800556515 /* AlignmentPlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69E7EC281BCA2800556515 /* AlignmentPlaygroundView.swift */; };
 		BB9AB012281BE443004E0BE4 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BB9AB011281BE443004E0BE4 /* ConfettiSwiftUI */; };
 		BBE2CB1728212D690016C240 /* HierarchyContentCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE2CB1628212D690016C240 /* HierarchyContentCustomView.swift */; };
@@ -83,7 +82,6 @@
 		BB3DA84F281F304700F1FC0C /* InteractableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractableView.swift; sourceTree = "<group>"; };
 		BB6400A92824025F00B29DE5 /* highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highlightable.swift; sourceTree = "<group>"; };
 		BB6400AB28241C2B00B29DE5 /* SpacingPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingPlaygroundView.swift; sourceTree = "<group>"; };
-		BB69E7EA281BC9CB00556515 /* JustifiedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedText.swift; sourceTree = "<group>"; };
 		BB69E7EC281BCA2800556515 /* AlignmentPlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentPlaygroundView.swift; sourceTree = "<group>"; };
 		BBE2CB1628212D690016C240 /* HierarchyContentCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyContentCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +138,6 @@
 				BB2EC3E12816DF3F00806EBD /* Model */,
 				BB2EC3E22816DF4D00806EBD /* View */,
 				BB2EC3E32816DF5500806EBD /* ViewModel */,
-				BB69E7E9281BC9B200556515 /* Utils */,
 				BB2EC3E02816DEC100806EBD /* Info.plist */,
 				BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */,
 				BB2EC3BA2816DE8800806EBD /* Assets.xcassets */,
@@ -237,14 +234,6 @@
 				BB6400A92824025F00B29DE5 /* highlightable.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		BB69E7E9281BC9B200556515 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				BB69E7EA281BC9CB00556515 /* JustifiedText.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +386,6 @@
 				BB2EC3B72816DE8600806EBD /* TypographyCourseApp.swift in Sources */,
 				BB2EC3EF2816E00E00806EBD /* PageNavigationView.swift in Sources */,
 				BB2EC4012816E0C100806EBD /* AppPlaygroundView.swift in Sources */,
-				BB69E7EB281BC9CB00556515 /* JustifiedText.swift in Sources */,
 				BB2EC4032816E0D900806EBD /* AppState.swift in Sources */,
 				BB2EC3F92816E07E00806EBD /* QuizPlaygroundView.swift in Sources */,
 				BB2EC3EB2816DFE300806EBD /* BaseView.swift in Sources */,
@@ -561,7 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -571,14 +559,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.henribredt.Typoversity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -593,7 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -603,14 +591,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = de.henribredt.Typoversity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

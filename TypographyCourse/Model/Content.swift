@@ -52,7 +52,7 @@ let fonts = Page(
     titleImageName: "textformat",
     titleImageSizeAdjustment: 0,
     playgroundView: .fontsPlaygroundView,
-    challengeHelp: "In this challenge you have to select the right font combination with the three pickers below. If you tab a picker, the view shows you with a blue highlight, which text is going to be edited. Remeber to choose a consistent type face and think about which font category is best suited for screens.",
+    challengeHelp: "In this challenge you have to select the right font combination with the three pickers below. If you tap a picker, the view shows you with a blue highlight, which text is going to be edited. Remeber to choose a consistent type face and think about which font category is best suited for screens.",
     elements: [
         PageText("Fonts are the foundational building block of every typographic work. There are countless fonts available, but they all fall into a few font categories. You can discover the most common of those below."),
         PageCustomView(.fontsContentCustomView, topSpacing: true),
@@ -99,13 +99,14 @@ let alignment = Page(
     titleImageName: "align.horizontal.left", // align.horizontal.left.fill
     titleImageSizeAdjustment: 0,
     playgroundView: .alignmentPlaygroundView,
+    challengeHelp: "In this challenge you have to select the correct paragraph alignments with the three pickers below. If you tap a picker, the view shows you with a blue highlight, which text is going to be edited. Left align all texts.",
     elements: [
         PageText("Your text alignment choice has a great influence on the readbility of a text. Most of the time, expecially for body text, the best option is to left align your text."),
         PageHeadline("Natural reading flow", topSpacing: true),
-        PageText("Supporting the natual language flow with your alignment improves readability. So in left to right languages like English or German, align you text to the left and never to the right. There are also other languages, in which text is read from right to left. If you are designing for such a language, choose the right text align option."),
+        PageText("Supporting the natual language flow with your alignment improves readability. So in left to right languages like English or German, align your text to the left and never to the right. There are also other languages, in which text is read from right to left. If you are designing for such a language, choose the right text align option."),
         PageHeadline("Justified text", topSpacing: true),
         PageText("You should avoid justified alignment, as the inconstent spacing between the words makes reading more demanding. We don't care that I may look a bit sleeker sometimes, beacuse readbility is the priority."),
-        PageTask("There's a paragraph on the right, play around with the diffrent alignment options, and finally choose the best fitting one.", topSpacing: true),
+        PageTask("There's a news paper article on the right, play around with the diffrent alignment options and then choose for each paragraph the best fitting one.", topSpacing: true),
         PageHeadline("Summary", topSpacing: true),
         PageText("In left to right languages, left align you're text — especially body text. Other text can be centered in some cases, but be sure to stick to a consistent, simple system. When in daubt, left align all texts."),
     ]
