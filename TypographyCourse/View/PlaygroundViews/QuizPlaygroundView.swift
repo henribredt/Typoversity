@@ -24,8 +24,8 @@ struct QuizPlaygroundView: View {
     @State private var cofettiAnimationValue: Int = 0
     
     // Quiz data
-    private var questions = ["If you wanted to design the text on a website, what font would you choose?", "Which statement is wrong?", "Too much tracking causes a text to become difficult to read because letters overlap."]
-    private var answers = [["Slab Serif", "Mono spaced", "Sans Serif", "Serif"],["Digital body text should be larger than 13 px", "The combination of semibold and bold font weights create good hierarchy", "When subheadlines have a font size of 20px, 40px would be a good size for headlines", "_empty_"],["True", "False", "_empty_", "_empty_"]]
+    private var questions = ["What font should be preffered for digital texts?", "Which statement is wrong?", "Too much tracking causes a text to become difficult to read because letters overlap."]
+    private var answers = [["Slab Serif", "Mono spaced", "Sans Serif", "Serif"],["Good typography makes text greatly readable", "In Right-to-Left languages you should left align text", "The combination of regular and bold font weights creates good contrast", "_empty_"],["True", "False", "_empty_", "_empty_"]]
     private var correctAnswers = [2,1,1]
     
     var body: some View {

@@ -4,9 +4,16 @@ struct AboutView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    var appVersion : String {
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown version"
+    }
+    
     var body: some View {
         
         VStack(spacing: 0){
+            SupporterView(text: "This app won an Apple 2022 SSC Award \u{00a0} 🎉")
+                                      .padding(.bottom, 30)
+            
             HStack{
                 Spacer()
                 Image(systemName: "signature")
@@ -23,7 +30,8 @@ struct AboutView: View {
             }
             
             VStack(spacing: 6){
-                Text("About this app")
+                
+                Text("About this app (\(appVersion))")
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .padding(.top, 7)
@@ -34,16 +42,13 @@ struct AboutView: View {
             .padding(.top)
             .padding(.bottom)
             .padding(.bottom, 60)
-            
-            //            SupporterView(text: "You're a supporter, thank you!")
-            //                .padding(.bottom, 60)
-            
-            
+              
             ScrollView(showsIndicators: false){
                 VStack(alignment: .leading, spacing: 35){
+                    
                     CalloutView(
                         systemName: "person.crop.circle",
-                        text: "This app was created as a submission for the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. I am a self-taught Swift developer and user experience design student. Learn more about me on my [Website](https://www.henribredt.de) or follow me on [Twitter](https://twitter.com/henricreates) or [Instagram](https://www.instagram.com/henricreates/)."
+                        text: "This app was created as a submission to the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. It was selected as a winning submission by Apple in May 2022. I am a self-taught Swift developer and user experience design student. Learn more about me on my [Website](https://www.henribredt.de) or follow me on [Twitter](https://twitter.com/henricreates) or [Instagram](https://www.instagram.com/henricreates/)."
                     )
                     
                     
@@ -55,7 +60,7 @@ struct AboutView: View {
                     
                     CalloutView(
                         systemName: "shippingbox.fill",
-                        text: "This app build upon the wonderful work other people have made avaliable open source. Therefore it incoperates the following third party library: [ConfettiSwiftUI](https://github.com/simibac/ConfettiSwiftUI.git) [(MIT License)](https://github.com/simibac/ConfettiSwiftUI/blob/master/LICENSE)"
+                        text: "This app builds upon the wonderful work that other people have made avaliable open source. It incoperates the following third party library: [ConfettiSwiftUI](https://github.com/simibac/ConfettiSwiftUI.git) [(MIT License)](https://github.com/simibac/ConfettiSwiftUI/blob/master/LICENSE)"
                     )
                 }
                 .padding(.leading, 35)
@@ -96,7 +101,7 @@ struct CalloutView: View {
                 .cornerRadius(10)
                 .padding(.trailing, 20)
             Text(try! AttributedString(markdown: text))
-                .font(.footnote)
+                .font(.caption)
                 .lineSpacing(1.1)
         }
     }
@@ -111,12 +116,12 @@ struct SupporterView: View {
         
         Text(text)
             .font(.caption)
-            .foregroundColor(Color.accentColor)
+            .foregroundColor(Color.primary.opacity(0.8))
             .padding(8)
             .padding(.leading, 6)
             .padding(.trailing, 6)
             .background(
-                Color.accentColor.opacity(0.1)
+                Color.primary.opacity(0.05)
                     .cornerRadius(30)
             )
     }
