@@ -50,9 +50,7 @@ struct SupportView: View {
                                     isShowingError = true
                                 }
                             }
-                            .disabled(true)
-                            .opacity(0.4)
-                            
+                    
                         }
                         
                         // Show while no products loaded

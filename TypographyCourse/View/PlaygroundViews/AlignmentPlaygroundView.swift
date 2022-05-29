@@ -38,6 +38,7 @@ struct AlignmentPlaygroundView: View {
                 VStack(alignment: .leading, spacing: 10){
                     Text("An example news paper article with two colums of placeholer text")
                         .font(.title3.bold())
+                        .frame(maxWidth: .infinity)
                         .highlightable(padding: 6, animationValue: $titleAreaAnimationValue)
                         .padding(.bottom, 10)
                         .multilineTextAlignment(titleAlignment)

@@ -5,11 +5,7 @@ public class AppState: ObservableObject {
     
     public init() {
         
-        // UNCOMMENT AFTER BETA
         // init currentPage with data from user defaults
-        //currentPage = UserDefaults.standard.integer(forKey: "currentPage")
-        
-        // REMOVE AFTER BETA
         if UserDefaults.standard.integer(forKey: "currentPage") >= BasicsCourse.count {
             // default to 0 if stored vaule is larger (pervious beta had one page more, without the app could crash)
             currentPage = 0

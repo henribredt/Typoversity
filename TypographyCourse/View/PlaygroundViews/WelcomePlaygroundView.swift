@@ -25,7 +25,7 @@ struct WelcomePlaygroundView: View {
                 .padding(.bottom, 50)
             HStack{
                 Spacer()
-                Text("This is the playground view where you will be soving the callenges.")
+                Text("This is the playground view where you will be solving the challenges.")
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 20)
                 

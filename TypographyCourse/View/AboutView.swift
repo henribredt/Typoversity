@@ -64,7 +64,7 @@ struct AboutView: View {
                     
                     CalloutView(
                         systemName: "shippingbox.fill",
-                        text: "This app builds upon the wonderful work that other people have made avaliable open source. It incoperates the following third party library: [ConfettiSwiftUI](https://github.com/simibac/ConfettiSwiftUI.git) [(MIT License)](https://github.com/simibac/ConfettiSwiftUI/blob/master/LICENSE)"
+                        text: "This app builds upon the wonderful work that other people have made available open source. It incorporates the following third party library: [ConfettiSwiftUI](https://github.com/simibac/ConfettiSwiftUI.git) [(MIT License)](https://github.com/simibac/ConfettiSwiftUI/blob/master/LICENSE)"
                     )
                 }
                 .padding(.leading, 35)
