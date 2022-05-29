@@ -50,6 +50,8 @@ struct SupportView: View {
                                     isShowingError = true
                                 }
                             }
+                            .disabled(true)
+                            .opacity(0.4)
                             
                         }
                         
@@ -117,7 +119,6 @@ struct SupportView: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .padding(.top, 7)
-                
                     .multilineTextAlignment(.center)
                 
                 Text("Support this app")
