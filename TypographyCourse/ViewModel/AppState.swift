@@ -4,8 +4,20 @@ import SwiftUI
 public class AppState: ObservableObject {
     
     public init() {
+        
+        // UNCOMMENT AFTER BETA
         // init currentPage with data from user defaults
-        currentPage = UserDefaults.standard.integer(forKey: "currentPage")
+        //currentPage = UserDefaults.standard.integer(forKey: "currentPage")
+        
+        // REMOVE AFTER BETA
+        if UserDefaults.standard.integer(forKey: "currentPage") >= BasicsCourse.count {
+            // default to 0 if stored vaule is larger (pervious beta had one page more, without the app could crash)
+            currentPage = 0
+        } else  {
+            // if not use normal code
+            print(UserDefaults.standard.integer(forKey: "currentPage"))
+            currentPage = UserDefaults.standard.integer(forKey: "currentPage")
+        }
         
         // init completionProgress with data from user defaults
         if let savedCompletionProgress = UserDefaults.standard.data(forKey: "completionProgress") {
@@ -58,5 +70,5 @@ public class AppState: ObservableObject {
             completionProgress.append(id)
         }
     }
-
+    
 }
