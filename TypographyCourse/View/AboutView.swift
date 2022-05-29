@@ -11,9 +11,6 @@ struct AboutView: View {
     var body: some View {
         
         VStack(spacing: 0){
-            SupporterView(text: "This app won an Apple 2022 SSC Award \u{00a0} 🎉")
-                                      .padding(.bottom, 30)
-            
             HStack{
                 Spacer()
                 Image(systemName: "signature")
@@ -40,15 +37,22 @@ struct AboutView: View {
                     .multilineTextAlignment(.center)
             }
             .padding(.top)
-            .padding(.bottom)
-            .padding(.bottom, 60)
+            .padding(.bottom, 30)
+            
+            SupporterView(text: "This app won an Apple 2022 SSC Award \u{00a0} 🎉")
+                .padding(.bottom, 60)
+                .onTapGesture {
+                    if let url = URL(string: "https://www.wwdcscholars.com/s/5B432D62-F6F5-4D56-A901-828BEDB7D18B/2022") {
+                        UIApplication.shared.open(url)
+                    }
+                }
               
             ScrollView(showsIndicators: false){
                 VStack(alignment: .leading, spacing: 35){
                     
                     CalloutView(
                         systemName: "person.crop.circle",
-                        text: "This app was created as a submission to the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. It was selected as a winning submission by Apple in May 2022. I am a self-taught Swift developer and user experience design student. Learn more about me on my [Website](https://www.henribredt.de) or follow me on [Twitter](https://twitter.com/henricreates) or [Instagram](https://www.instagram.com/henricreates/)."
+                        text: "The app was created as a submission to the Apple WWDC22 Swift Student Challenge by Henri Bredt in April 2022. It was selected as a winning submission by Apple in May 2022. I am a self-taught Swift developer and user experience design student. Learn more about me on my [Website](https://www.henribredt.de) or follow me on [Twitter](https://twitter.com/henricreates) or [Instagram](https://www.instagram.com/henricreates/)."
                     )
                     
                     
@@ -72,7 +76,7 @@ struct AboutView: View {
             Button {
                 dismiss()
             } label: {
-                InteractableView(basePadding: 12, sidePadding: 7) {  Text("Dismiss") }
+                InteractableView(basePadding: 12, sidePadding: 7) {  Text("Dismiss").font(.callout) }
             }
             .padding()
         }

@@ -9,9 +9,6 @@ struct PageNavigationView: View {
     /// manage user progress
     @ObservedObject private var appState: AppState
     
-    /// defines if the app shows the about window
-    @State private var showingAboutView = false
-    
     var body : some View {
         VStack(alignment: .leading, spacing: 0){
             
@@ -23,14 +20,20 @@ struct PageNavigationView: View {
             
             pageOverview
             
-            moreButton
+            VStack(spacing: 8){
+                moreButton
+                supportButton
+            }
         }
         .padding(18)
         .padding(.top, 25)
         .background(Color(uiColor: .secondarySystemBackground))
         .animation(Animation.timingCurve(0.44, 1.86, 0.61, 0.99, duration: 0.5), value: appState.completionProgress)
-        .sheet(isPresented: $showingAboutView){
+        .sheet(isPresented: $appState.showingAboutView){
             AboutView()
+        }
+        .sheet(isPresented: $appState.showingSupportView){
+            SupportView()
         }
     }
     
@@ -118,7 +121,7 @@ struct PageNavigationView: View {
     /// toggles a modal view showing background info about the app
     var moreButton: some View {
         Button {
-            showingAboutView.toggle()
+            appState.showingAboutView.toggle()
         } label: {
             HStack{
                 Image(systemName: "info.circle")
@@ -137,5 +140,29 @@ struct PageNavigationView: View {
             }
         }
     }
+    
+    //  MARK:supportButton
+        /// toggles a modal view showing support options
+        var supportButton: some View {
+            Button {
+                appState.showingSupportView.toggle()
+            } label: {
+                HStack{
+                    Image(systemName: "heart")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(Color.accentColor)
+                        .frame(width: 17, height: 17)
+                        .padding(5)
+                        //.padding(.trailing, 2)
+                        .transition(.scale.combined(with: .opacity))
+                    
+                    Text("Support this app")
+                        .font(.footnote)
+                        .foregroundColor(.primary)
+                    Spacer()
+                }
+            }
+        }
     
 }

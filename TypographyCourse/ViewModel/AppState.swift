@@ -32,8 +32,19 @@ public class AppState: ObservableObject {
             if let encoded = try? JSONEncoder().encode(completionProgress) {
                 UserDefaults.standard.set(encoded, forKey: "completionProgress")
             }
+            
+            // show support page if user completes course
+            if (completionProgress.count * 100 / BasicsCourse.count) >= 100 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + (2.5) ) {
+                    self.showingSupportView = true
+                }
+            }
         }
     }
+    
+    /// Store popover state
+    @Published public var showingSupportView = false
+    @Published public var showingAboutView = false
     
     /// Reset all user progress
     func resetCompletionProgress() {

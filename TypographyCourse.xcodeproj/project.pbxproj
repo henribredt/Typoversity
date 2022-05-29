@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2B3BE528421AB5003CB44C /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2B3BE428421AB5003CB44C /* SupportView.swift */; };
+		BB2B3BE82842C49D003CB44C /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB2B3BE72842C49D003CB44C /* SwiftyStoreKit */; };
 		BB2EC3B72816DE8600806EBD /* TypographyCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */; };
 		BB2EC3BB2816DE8800806EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2EC3BA2816DE8800806EBD /* Assets.xcassets */; };
 		BB2EC3BE2816DE8800806EBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2EC3BD2816DE8800806EBD /* Preview Assets.xcassets */; };
@@ -54,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB2B3BE428421AB5003CB44C /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
 		BB2EC3B32816DE8600806EBD /* TypographyCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypographyCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2EC3B62816DE8600806EBD /* TypographyCourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyCourseApp.swift; sourceTree = "<group>"; };
 		BB2EC3BA2816DE8800806EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9AB012281BE443004E0BE4 /* ConfettiSwiftUI in Frameworks */,
+				BB2B3BE82842C49D003CB44C /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +191,7 @@
 				BB2EC3F22816E02C00806EBD /* ContentCustomViews */,
 				BB2EC3F52816E04E00806EBD /* PlaygroundViews */,
 				BB2EC3E82816DFD100806EBD /* AboutView.swift */,
+				BB2B3BE428421AB5003CB44C /* SupportView.swift */,
 				BB2EC3EA2816DFE300806EBD /* BaseView.swift */,
 				BB2EC3EC2816DFFB00806EBD /* PageContentView.swift */,
 				BB2EC3EE2816E00E00806EBD /* PageNavigationView.swift */,
@@ -254,6 +259,7 @@
 			name = TypographyCourse;
 			packageProductDependencies = (
 				BB9AB011281BE443004E0BE4 /* ConfettiSwiftUI */,
+				BB2B3BE72842C49D003CB44C /* SwiftyStoreKit */,
 			);
 			productName = TypographyCourse;
 			productReference = BB2EC3B32816DE8600806EBD /* TypographyCourse.app */;
@@ -329,6 +335,7 @@
 			mainGroup = BB2EC3AA2816DE8600806EBD;
 			packageReferences = (
 				BB9AB010281BE443004E0BE4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				BB2B3BE62842C49D003CB44C /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 			);
 			productRefGroup = BB2EC3B42816DE8600806EBD /* Products */;
 			projectDirPath = "";
@@ -390,6 +397,7 @@
 				BB2EC3F92816E07E00806EBD /* QuizPlaygroundView.swift in Sources */,
 				BB2EC3EB2816DFE300806EBD /* BaseView.swift in Sources */,
 				BB2EC3E72816DF9D00806EBD /* Page.swift in Sources */,
+				BB2B3BE528421AB5003CB44C /* SupportView.swift in Sources */,
 				BB3DA850281F304700F1FC0C /* InteractableView.swift in Sources */,
 				BB2EC3E52816DF8000806EBD /* Content.swift in Sources */,
 				BB69E7ED281BCA2800556515 /* AlignmentPlaygroundView.swift in Sources */,
@@ -549,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -581,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"TypographyCourse/Preview Content\"";
 				DEVELOPMENT_TEAM = 8V3J763Y9A;
 				ENABLE_PREVIEWS = YES;
@@ -725,6 +733,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB2B3BE62842C49D003CB44C /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.3;
+			};
+		};
 		BB9AB010281BE443004E0BE4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
@@ -736,6 +752,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB2B3BE72842C49D003CB44C /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB2B3BE62842C49D003CB44C /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
 		BB9AB011281BE443004E0BE4 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BB9AB010281BE443004E0BE4 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
