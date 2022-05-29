@@ -93,6 +93,6 @@ struct PagePlaygroundView: View {
             }
             .padding(.top, 10)
         }
-        .padding(20)
+        .padding(25)
     }
 }
