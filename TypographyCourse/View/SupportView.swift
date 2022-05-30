@@ -98,7 +98,7 @@ struct SupportView: View {
         VStack(spacing: 0){
             HStack{
                 Spacer()
-                Image(systemName: "heart.fill")
+                Image(systemName: "heart")
                     .resizable()
                     .scaledToFit()
                     .foregroundColor(Color(uiColor: .systemBackground))
